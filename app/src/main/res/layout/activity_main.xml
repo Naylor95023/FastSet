@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvVolume"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btMax"
+        style="@android:style/Widget.Button.Toggle"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="24dp"
+        android:text="MAX"
+        app:layout_constraintStart_toEndOf="@+id/tvVolume"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btLMin"
+        style="@android:style/Widget.Holo.Button.Toggle"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="DARK"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/tvLight"
+        app:layout_constraintTop_toBottomOf="@+id/btLMax" />
+
+    <Button
+        android:id="@+id/btL75"
+        style="@android:style/Widget.Holo.Button.Toggle"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="8dp"
+        android:text="75%"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="@+id/btL50" />
+
+    <Button
+        android:id="@+id/btL50"
+        style="@android:style/Widget.Holo.Button.Toggle"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="50%"
+        app:layout_constraintBottom_toTopOf="@+id/btL75"
+        app:layout_constraintEnd_toEndOf="@+id/btL25"
+        app:layout_constraintTop_toBottomOf="@+id/btL25" />
+
+    <Button
+        android:id="@+id/btL25"
+        style="@android:style/Widget.Holo.Button.Toggle"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="8dp"
+        android:text="25%"
+        app:layout_constraintEnd_toEndOf="@+id/bt75per"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/btLMax"
+        style="@android:style/Widget.Holo.Button.Toggle"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="32dp"
+        android:text="BRIGHT"
+        app:layout_constraintStart_toEndOf="@+id/tvLight"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/btMute"
+        style="@android:style/Widget.Button.Toggle"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="MUTE"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/btMax"
+        app:layout_constraintTop_toBottomOf="@+id/btMax" />
+
+    <Button
+        android:id="@+id/bt25per"
+        style="@android:style/Widget.Button.Toggle"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="25%"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btMax"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt50per"
+        style="@android:style/Widget.Button.Toggle"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        android:text="50%"
+        app:layout_constraintStart_toStartOf="@+id/bt25per"
+        app:layout_constraintTop_toBottomOf="@+id/bt25per" />
+
+    <Button
+        android:id="@+id/bt75per"
+        style="@android:style/Widget.Button.Toggle"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="75%"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/bt50per"
+        app:layout_constraintTop_toBottomOf="@+id/bt50per" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="275dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="音量"
+        app:layout_constraintBottom_toTopOf="@+id/tvVolume"
+        app:layout_constraintEnd_toEndOf="@+id/tvVolume"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btExit"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="EXIT"
+        app:layout_constraintBottom_toBottomOf="@+id/btSleep"
+        app:layout_constraintEnd_toStartOf="@+id/btSleep"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="亮度"
+        app:layout_constraintBottom_toTopOf="@+id/tvLight"
+        app:layout_constraintEnd_toEndOf="@+id/tvLight"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLight"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="550dp" />
+
+    <Button
+        android:id="@+id/btSleep"
+        style="@android:style/Widget.Material.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="SLEEP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+</android.support.constraint.ConstraintLayout>
